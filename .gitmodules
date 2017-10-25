@@ -1,3 +1,6 @@
 [submodule "lib/shere-storage"]
 	path = lib/shere-storage
 	url = https://github.com/shere-app/shere-storage.git
+[submodule "lib/cxxopts"]
+	path = lib/cxxopts
+	url = https://github.com/jarro2783/cxxopts.git
