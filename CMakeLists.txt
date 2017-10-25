@@ -10,11 +10,22 @@ cmake_minimum_required(VERSION 3.7)
 project(shere-cli CXX)
 set(CMAKE_CXX_STANDARD 17)
 
-
-# Add the platform-specific sources
+# Add the  sources
+include_directories(src)
 set(SOURCES
-    src/main.cpp
+    src/ShereCli.h
+    src/ShereCli.cpp
 )
 
+# Command line argument parsing
+include_directories(lib/cxxopts/include)
+
+# Create separate library without main() - use for both binary and testing
+add_library(shere-cli-lib ${SOURCES})
+
 # Create executable binary
-add_executable(shere ${SOURCES})
+add_executable(shere src/main.cpp)
+target_link_libraries(shere shere-cli-lib)
+
+# Set up testing
+add_subdirectory(test)

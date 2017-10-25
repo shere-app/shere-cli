@@ -1,12 +1,13 @@
 //
-// author: Marek
-// created: 25.10.2017.
+// main.cpp
+// author: Marek Foltýn (marek@foltynovi.cz)
+// created: 2017-10-25
 //
 
-#include <filesystem>
-#include <iostream>
+#include "ShereCli.h"
 
 int main(int argc, char * argv[])
 {
-    std::cout << "Hi bro:" << std::experimental::filesystem::current_path() << std::endl;
+    ShereCli app;
+    return app.run(argc, argv);
 }
