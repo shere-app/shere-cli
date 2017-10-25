@@ -8,7 +8,7 @@
 # Project settings
 cmake_minimum_required(VERSION 3.7)
 project(shere-cli CXX)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 
 # Add the platform-specific sources
